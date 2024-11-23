@@ -53,7 +53,7 @@ void loop()
     	digitalWrite(10, LOW);
     	digitalWrite(4, HIGH); 
     	digitalWrite(3, LOW); 
-    Serial.print("     || NO Motion Detected    " );
+    Serial.print(" NO Motion Detected" );
   	}
  
   if (sen2Value == 1) 
@@ -62,7 +62,7 @@ void loop()
     delay(3000);
     	digitalWrite(4, LOW); 
     	digitalWrite(3, HIGH);
-     Serial.print(" 	   || Motion Detected!      " );
+     Serial.print(" Motion Detected!" );
   	}
   delay(300);
 int val = analogRead(gas_sensor);
@@ -80,14 +80,14 @@ int val = analogRead(gas_sensor);
   if (sen1Value < 100) 
   	{
     	servo_7.write(90);
-    Serial.print(" 	  || Door Open!  ; Distance = ");
+    Serial.print(" Door Open!  ; Distance = ");
     Serial.print(sen1Value);
    Serial.print("\n");
   	} 
   else 
   	{
     	servo_7.write(0);
-    Serial.print(" 	  || Door Closed! ; Distance =  ");
+    Serial.print(" Door Closed! ; Distance =  ");
     Serial.print(sen1Value);
     Serial.print("\n");
   }
